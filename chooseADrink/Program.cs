@@ -13,7 +13,7 @@ namespace chooseADrink
             {
                 drink = "Water";
             }
-            else if(profession == "Businessman" && profession == "Businesswomen")
+            else if(profession == "Businessman" || profession == "Businesswoman")
             {
                 drink = "Coffee";
             }

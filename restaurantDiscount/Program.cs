@@ -10,13 +10,14 @@ namespace restaurantDiscount
             string package = Console.ReadLine();
             string hall = "";
             double price = 0;
+            bool isValidGroup = true;
 
             if (groupSize > 0 && groupSize <= 50)
             {
                 hall = "Small Hall";
                 if (package == "Normal")
                 {
-                    price = (2500 + 500 - (2500 + 500)*0.05)/groupSize;
+                    price = (2500 + 500 - (2500 + 500) * 0.05) / groupSize;
                 }
                 else if (package == "Gold")
                 {
@@ -27,7 +28,7 @@ namespace restaurantDiscount
                     price = (2500 + 1000 - (2500 + 1000) * 0.15) / groupSize;
                 }
             }
-            else if (groupSize <=100)
+            else if (groupSize <= 100)
             {
                 hall = "Terrace";
                 if (package == "Normal")
@@ -61,10 +62,14 @@ namespace restaurantDiscount
             }
             else
             {
+                isValidGroup = false;
                 Console.WriteLine("We do not have an appropriate hall.");
             }
-            Console.WriteLine($"We can offer you the {hall}");
-            Console.WriteLine($"The price per person is {price}$");
+            if (isValidGroup)
+            {
+                Console.WriteLine($"We can offer you the {hall}");
+                Console.WriteLine($"The price per person is {price:f2}$");
+            }
         }
     }
 }

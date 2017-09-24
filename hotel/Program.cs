@@ -17,7 +17,7 @@ namespace hotel
                 studioPrice = 50 * nightCounts;
                 if (nightCounts > 7)
                 {
-                    studioPrice = (50 - 50 * 0.05) * nightCounts;
+                    studioPrice = (50 * 0.95) * nightCounts;
                 }
                 doublePrice = 65 * nightCounts;
                 suitePrice = 75 * nightCounts;
@@ -28,7 +28,7 @@ namespace hotel
                 doublePrice = 72 * nightCounts;
                 if (nightCounts > 14)
                 {
-                    doublePrice = (60 - 60 * 0.10) * nightCounts;
+                    doublePrice = (60 * 0.9) * nightCounts;
                 }
                 suitePrice = 82 * nightCounts;
             }
@@ -39,15 +39,15 @@ namespace hotel
                 suitePrice = 89 * nightCounts;
                 if (nightCounts > 14)
                 {
-                    suitePrice = (89 - 89 * 0.15) * nightCounts;
+                    suitePrice = (89 * 0.85) * nightCounts;
                 }
             }
             else if (month == "October")
             {
-                studioPrice = 50 *(nightCounts -1);
+                studioPrice = 50 * nightCounts;
                 if (nightCounts > 7)
                 {
-                    studioPrice = (50 - 50 * 0.05) * (nightCounts -1);
+                    studioPrice = (50 * 0.95) * (nightCounts -1);
                     
                 }
                 doublePrice = 65 * nightCounts;
@@ -55,12 +55,16 @@ namespace hotel
             }
             else if (month == "September")
             {
-                studioPrice = 60 * (nightCounts -1 );
+                studioPrice = 60 * nightCounts;
+                if (nightCounts > 7)
+                {
+                    studioPrice = 60 * (nightCounts - 1);
+                }
                 
                 doublePrice = 72 * nightCounts;
                 if (nightCounts > 14)
                 {
-                    doublePrice = (72 - 72 * 0.1) * nightCounts;
+                    doublePrice = (72 * 0.9) * nightCounts;
                 }
                 suitePrice = 82 * nightCounts;
             }

@@ -17,13 +17,13 @@ namespace wordInPlural
             }
             else if (word.EndsWith("o") || word.EndsWith("s") || word.EndsWith("x") || word.EndsWith("z"))                   
             {
-                wordTrim = word.Remove(word.Length - 1);
-                wordAdd = wordTrim + "es";
+              
+                wordAdd = word + "es";
             }
             else if (word.EndsWith("ch") || word.EndsWith("sh"))
             {
-                wordTrim = word.Remove(word.Length - 2);
-                wordAdd = wordTrim + "es";
+             
+                wordAdd = word + "es";
             }
             else
             {

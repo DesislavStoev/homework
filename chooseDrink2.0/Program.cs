@@ -17,7 +17,7 @@ namespace chooseDrink2._0
                 totalPrice = 0.70 * quantity;
                 
             }
-            else if (profession == "Businessman" && profession == "Businesswomen")
+            else if (profession == "Businessman" || profession == "Businesswoman")
             {
                 totalPrice = 1.00 * quantity;
             }
